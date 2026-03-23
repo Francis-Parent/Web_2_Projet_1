@@ -1,0 +1,773 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    order: 0;
+}
+
+:root {
+    /* ===== COULEURS ===== */
+    --color-primary: #EC994B;
+    --color-secondary: #1A2E1A;
+    --color-accent: #FFFFFF;
+    --color-bg: #15133C;
+    --color-text: #EC994B;
+    --color-text-secondary: #1A2E1A;
+    --color-border: #FFFFFF;
+}
+
+/**
+* header - barre de navigation principale
+*
+* utilisation:
+* <header class="header">
+*        <div class="header__brand">
+*            <div class="header__logo"><img src="/coverage/Images/logo-svg.svg" alt="Logo du site web"></div>
+*            <span class="header__title">Ascension</span>
+*        </div>
+*        <nav class="header__nav">
+*            <a href="#">À propos</a>
+*            <a href="#">Services</a>
+*            <a href="#">Horaires</a>
+*            <a href="#">Témoignages</a>
+*            <a href="#">Équipe</a>
+*            <a href="#">Tarifs</a>
+*            <a href="#">Contact</a>
+*        </nav>
+*        <div class="header__connexion">
+*            <span class="header__bouton">Venez grimper</span>
+*        </div>
+*    </header>
+*
+* éléments:
+* header__brand: group du logo et du nom de la compagnie
+* header__logo: logo de la compagnie
+* header__title: titre de la compagnie
+* header__nav: contenant des aspects navigations
+* header__connexion: zone du bouton
+* header__bouton: texte du bouton
+*
+* variantes: 
+*/
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    padding: 10px 60px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-bottom: 10px;
+    background-color:#15133C;
+   
+}
+
+.header__brand {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    padding: 10px 60px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.header_logo {
+    width: 57px;
+    height: 36px;
+}
+
+.header__title {
+    color: var(----color-accent, #EC994B);
+    font-family: "Montagu Slab";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin-left: 10px;
+}
+
+.header__nav {
+    color: #15133C;
+    font-family: "Montagu Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 137.5% */
+}
+
+.header__nav a {
+    color: var(----color-text, #FFFFFF);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    transition: all 0.15s;
+}
+
+.header__connexion {
+    color: var(----color-text, #1A2E1A);
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 157.143% */
+}
+
+.header__bouton {
+    display: flex;
+    width: 192px;
+    padding: 10px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: var(----color-accent, #EC994B);
+}
+/**
+* hero - image principale du site web
+*
+* utilisation:
+* <div class="hero">
+*            <div class="hero__brand">
+*                <div>
+*                    <h1 class="hero__title">Bienvenue à l’Ascension</h1>
+*                </div>
+*                <div>
+*                    <p class="hero__subtitle">Découvrez notre passion pour l'escalade. <br> Grimpez comme les pros!</p>
+*                </div>
+*                <div class="hero__savoir">
+*                    <span class="hero__bouton__savoir">En savoir plus</span>
+*                </div>
+*                <div class="hero__rejoindre">
+*                    <span class="hero__bouton__rejoindre">Rejoignez-nous</span>
+*                </div>
+*            </div>
+*        </div>
+*
+* éléments:
+* hero__brand: group qui contient chaque aspect
+* hero__title: titre du hero
+* hero__subtitle: sous-titre du hero
+* hero__savoir: zone du bouton hero__bouton__savoir
+* hero__bouton__savoir: texte du bouton hero__savoir
+* hero__rejoindre: zone du bouton hero__bouton__rejoindre
+* hero__bouton__rejoindre: texte du bouton hero__rejoindre
+*
+* variantes: 
+*/
+.hero {
+    display: flex;
+    height: 641px;
+    padding: 60px;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    order: 2;
+    background-image: url(Images/hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero__title {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-self: stretch;
+}
+
+.hero__subtitle {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    width: 520px;
+}
+
+.hero__savoir {
+    color: #FFFFFF;
+    font-family: "Montagu Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+}
+
+.hero__bouton__savoir {
+    display: flex;
+    width: 240px;
+    padding: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #FFFFFF;
+}
+
+.hero__rejoindre {
+    display: flex;
+    width: 240px;
+    padding: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(----color-accent, #EC994B);
+}
+
+.hero__bouton__rejoindre {
+    color: var(----color-text, #15133C);
+    font-family: "Montagu Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+}
+/**
+* information - information générale du site web
+*
+* utilisation:
+* <section class="information">
+*            <!-- Section information -->
+*            <h1 class="information__titre">À propos de nous</h1>
+*            <p>Notre gym est un espace dédié aux grimpeurs de tout niveaux.</p>
+*            <div>
+*            <section class="information__description">
+*            <h2>Notre Mission</h2>
+*            <p>Fournir un environnement sûr et stimulant pour l'escalade.</p>
+*            <p>L'équipe de l'Ascension</p>
+*            <div>
+*            <h2>Nous Croyons</h2>
+*            <p>Que l'escalade est pour tout le monde, peu impote l'âge ou le niveau.</p>
+*            <p>L'équipe de l'Ascension</p>
+*            </section>
+*        </section>
+*
+* éléments:
+* information__titre: titre de la page web
+* information__description: information sur la mission et la croyance de la compagnie
+*
+* variantes: 
+*/
+.information {
+    display: flex;
+    padding: 60px 170px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+}
+
+.information__titre {
+    color: #15133C;
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    /* 120% */
+    width: 520px;
+}
+
+.information__description {
+    color: #15133C;
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    width: 918px;
+    flex-direction: row;
+}
+/**
+* services - activités disponibles à faire
+*
+* utilisation:
+* <section class="services">
+*            <!-- Section services -->
+*            <h1 class="services__titre">Nos services</h1>
+*            <div class="hero__offres">
+*                <span class="hero__bouton__offres">Découvrez nos offres</span>
+*            </div>
+*            <section class="services__description">
+*            <p>Cours d'escalade</p>
+*            <h2>Cours d'Itination</h2>
+*            <p>Un cours conçu pour les débutants.</p>
+*            <div>
+*            <p>Escalade en bloc</p>
+*            <h2>Escalade en Bloc</h2>
+*            <p>Profitez de notre espace de bloc premium.</p>
+*            <div>
+*            <p>Compétitions</p>
+*            <h2>Compétitions Mensuelles</h2>
+8            <p>Participez à nos compétitions amicales.</p>
+*            </section>
+*        </section>
+*
+* éléments:
+* services__titre: titre de la page web
+* hero__offres: zone pour afficher hero__bouton__offres 
+* hero__bouton__offres: texte pour le bouton hero__offres
+* services__description: information sur les programmes disponibles
+*
+* variantes: 
+*/
+.services {
+    display: flex;
+    padding: 60px 170px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+    background-color: #15133C;
+}
+
+.services__titre {
+    color: #EC994B;
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    /* 120% */
+    width: 520px;
+}
+
+.services__description {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+.hero__offres {
+    display: flex;
+    width: 240px;
+    padding: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(----color-accent, #EC994B);
+}
+
+.hero__bouton__offres {
+    color: var(----color-text, #15133C);
+    font-family: "Montagu Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+}
+/**
+* horaires - horaires d'ouverture
+*
+* utilisation:
+* <section class="horaires">
+*            <!-- Section horaires -->
+*            <h1 class="horaires__titre">Horaires</h1>
+*            <p>Consultez notre emploi du temps.</p>
+*            <div>
+*            <h2>Lundi</h2>
+*            <p>10h - 22h</p>
+*            <div>
+*            <h2>Mardi</h2>
+*            <p>10h - 22h</p>
+*            <div>
+*            <h2>Mercredi</h2>
+*            <p>10h - 22h</p>
+*            <div>
+*            <h2>Jeudi</h2>
+*            <p>10h - 22h</p>
+*            <div>
+*            <h2>Vendredi</h2>
+*            <p>10h - 23h</p>
+*            <div>
+*            <h2>Samedi</h2>
+*            <p>10h - 21h</p>
+*        </section>
+*
+* éléments:
+* horaires__titre: titre de la page web
+*
+* variantes: 
+*/
+.horaires {
+    display: flex;
+    padding: 60px 170px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+}
+
+.horaires__titre {
+    color: #EC994B;
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    /* 120% */
+    width: 520px;
+}
+/**
+* témoignages - commentaires de la clientelle de la compagnie
+*
+* utilisation:
+* <section class="témoignages">
+*            <!-- Section témoignages -->
+*            <h1 class="témoignages__titre">Témoignages</p>
+*            <div>
+*            <section class="témoignages__description">
+*            <h2>Alice</h2>
+*            <p>C'est l'endroit parfait pour grimper!</p>
+*            <div>
+*            <h2>Bob</h2>
+*            <p>Ambiance incroyable et super équipe!</p>
+*            </section>
+*        </section>
+*
+* éléments:
+* témoignages__titre: titre de la page web
+* témoignages__description: commentaires de deux personnes dans la clientelle sur leurs expériences
+*
+* variantes: 
+*/
+.témoignages {
+    display: flex;
+    padding: 60px 170px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+    background-color: #F1EEE9;
+}
+
+.témoignages__titre {
+    color: #EC994B;
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    /* 120% */
+    width: 520px;
+}
+
+.témoignages__description {
+    color: #000;
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+/**
+* équipe - groupe de travailleurs dans la compagnie
+*
+* utilisation:
+* <section class="équipe">
+*            <!-- Section équipe -->
+*            <h1 class="équipe__titre">Rencontrez notre Équipe</h1>
+*            <p>Des professionnels passionnés prêts à vous aider.</p>
+*            <div>
+*            <div class="hero__profils">
+*                    <span class="hero__bouton__profits">Voir les profils</span>
+*            </div>
+*        </section>
+*
+* éléments:
+* équipe__titre: titre de la page web
+* hero__profils: zone pour hero__bouton__profils
+* hero__profils: texte sur hero__profils
+*
+* variantes: 
+*/
+.équipe {
+    display: flex;
+    padding: 60px 170px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+}
+
+.équipe__titre {
+    color: #15133C;
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    /* 120% */
+    width: 520px;
+}
+
+.hero__profils {
+    display: flex;
+    width: 240px;
+    padding: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(----color-accent, #15133C);
+}
+
+.hero__bouton__profils {
+    color: var(----color-text, #FFFFFF);
+    font-family: "Montagu Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+}
+/**
+* tarification - choix de plan pour participer
+*
+* utilisation:
+* <section class="tarification">
+*            <!-- Section prix tarification -->
+*            <h1 class="tarification__titre">Tarification</h1>
+*            <p>Choisissez le plan qui vous convient.</p>
+*            <div>
+*            <h2>Passe Mensuelle</h2>
+*            <p>Accès illimité pour 50$.</p>
+*            <div>
+*            <h2>Passe Étudiant</h2>
+*            <p>Accès illimité pour 35$.</p>
+*            <div>
+*            <h2>Passe d'une journée</h2>
+*            <p>Accès à la salle pour seulement 15$.</p>
+*        </section>
+*
+* éléments:
+* tarification__titre: titre de la page web
+*
+* variantes: 
+*/
+.tarification {
+    display: flex;
+    padding: 60px 170px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+    background-color: #F1EEE9;
+}
+
+.tarification__titre {
+    color: #EC994B;
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    /* 120% */
+    width: 520px;
+}
+/**
+* contact - façon de communiquer avec la compagnie
+*
+* utilisation:
+* <section class="contact">
+*            <!-- Section assistance contact -->
+*            <h1 class="contact__titre">Contactez-nous</h1>
+*            <div>
+*            <form>
+*            <label for="nom">Nom</label>
+*            <input id="nom" type="text">
+*            </form>
+*            <div>
+*            <form>
+*            <label for="email">Email</label>
+*            <input id="email" type="text">
+*            </form>
+*            <div>
+*            <form>
+*            <label for="message">Message</label>
+*            <input id="message" type="text">
+*            </form>
+*            <div>
+*                <div class="hero__contact">
+*                    <span class="hero__bouton__contact">Envoyer</span>
+*            </div>
+*        </section>
+*
+* éléments:
+* contact__titre: titre de la page web
+* hero__contact: zone pour afficher hero__bouton__contact
+* hero__bouton__contact: texte pour hero__bouton
+*
+* variantes: 
+*/
+.contact {
+    display: flex;
+    padding: 60px 170px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+}
+
+.contact__titre {
+    color: #EC994B;
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    /* 120% */
+    width: 520px;
+}
+
+.hero__contact {
+    display: flex;
+    width: 240px;
+    padding: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(----color-accent, #15133C);
+}
+
+.hero__bouton__contact {
+    color: var(----color-text, #FFFFFF);
+    font-family: "Montagu Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+}
+/**
+* fin - bas de page du site web
+*
+* utilisation:
+* <section class="fin">
+*            <!-- Section bas de page fin -->
+*            <nav class="fin__nav">
+*            <a href="#">À propos</a>
+*            <a href="#">Tarifs</a>
+*            <a href="#">Horaires</a>
+*            <a href="#">Nous contacter</a>
+*            <a href="#">Suivez nous sur les réseaux sociaux!</a>
+*        </nav>
+*        <div class="fin__connexion">
+*            <h2>Venez grimper!</h2>
+*            <span class="fin__bouton">Obtenir une passe</span>
+*        </div>
+*        </section>
+*
+* éléments:
+* fin__nav: conteneur de liens pour naviguer dans les autres pages du site web
+* fin__connexion: zone pour afficher fin__bouton
+* fin__bouton: texte pour fin__connextion
+*
+* variantes: 
+*/
+.fin {
+    display: flex;
+    flex-direction: row;
+    padding: 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+    background-color:#15133C;
+   
+}
+
+.fin__nav {
+    color: #15133C;
+    font-family: "Montagu Slab";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 137.5% */
+}
+
+.fin__nav a {
+    color: var(----color-text, #FFFFFF);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    transition: all 0.15s;
+}
+
+.fin__connexion {
+    color: var(----color-text, #1A2E1A);
+    background-color: #FFFFFF;
+    text-align: center;
+    font-family: "Montagu Slab";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 157.143% */
+}
+
+.fin__bouton {
+    display: flex;
+    width: 192px;
+    padding: 10px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: var(----color-accent, #EC994B);
+}
