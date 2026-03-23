@@ -1,1 +1,5 @@
-# Web_2_Projet_1
+# Nom du site web: Ascension
+
+# Projet scolaire réalisé dans le cadre du cours Web 2 au programme de Techniques d‘intégration multimédia du Collège Montmorency. 2026. 
+
+# Réalisé par: Francis Parent
