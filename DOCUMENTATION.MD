@@ -1,5 +1,11 @@
-# Démarche:
+# Système de nomenclature CSS:
 
-# Choix techniques:
+# Variables CSS et design tokens:
 
-# Défis rencontrés:
+# Liste des composants réutilisables:
+
+# Décisions Flexbox pour les layouts complexes:
+
+# Choix de fonctions CSS fluides:
+
+# Défis techniques rencontrés et vos solutions:
